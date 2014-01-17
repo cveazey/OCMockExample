@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface DEAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+- (NSString *)descriptionOfObject:(id)object;
+
 
 @end

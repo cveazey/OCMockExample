@@ -19,6 +19,8 @@
 		762255FB1888BF6300C07D36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762255E31888BF6300C07D36 /* UIKit.framework */; };
 		762256031888BF6300C07D36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 762256011888BF6300C07D36 /* InfoPlist.strings */; };
 		762256051888BF6300C07D36 /* OCMockExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 762256041888BF6300C07D36 /* OCMockExampleTests.m */; };
+		7622560F1888C0AA00C07D36 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7622560E1888C0AA00C07D36 /* libOCMock.a */; };
+		7622561F1888C38B00C07D36 /* DEObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7622561E1888C38B00C07D36 /* DEObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,15 @@
 		762256001888BF6300C07D36 /* OCMockExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OCMockExampleTests-Info.plist"; sourceTree = "<group>"; };
 		762256021888BF6300C07D36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		762256041888BF6300C07D36 /* OCMockExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCMockExampleTests.m; sourceTree = "<group>"; };
+		7622560E1888C0AA00C07D36 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = usr/lib/libOCMock.a; sourceTree = "<group>"; };
+		762256171888C26A00C07D36 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		762256181888C26A00C07D36 /* OCMArg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		762256191888C26A00C07D36 /* OCMConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		7622561A1888C26A00C07D36 /* OCMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		7622561B1888C26A00C07D36 /* OCMockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		7622561C1888C26A00C07D36 /* OCMockRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
+		7622561D1888C38B00C07D36 /* DEObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEObject.h; sourceTree = "<group>"; };
+		7622561E1888C38B00C07D36 /* DEObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7622560F1888C0AA00C07D36 /* libOCMock.a in Frameworks */,
 				762255F91888BF6300C07D36 /* XCTest.framework in Frameworks */,
 				762255FB1888BF6300C07D36 /* UIKit.framework in Frameworks */,
 				762255FA1888BF6300C07D36 /* Foundation.framework in Frameworks */,
@@ -96,6 +108,7 @@
 		762255DE1888BF6300C07D36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7622560E1888C0AA00C07D36 /* libOCMock.a */,
 				762255DF1888BF6300C07D36 /* Foundation.framework */,
 				762255E11888BF6300C07D36 /* CoreGraphics.framework */,
 				762255E31888BF6300C07D36 /* UIKit.framework */,
@@ -111,6 +124,8 @@
 				762255EF1888BF6300C07D36 /* DEAppDelegate.m */,
 				762255F11888BF6300C07D36 /* Images.xcassets */,
 				762255E61888BF6300C07D36 /* Supporting Files */,
+				7622561D1888C38B00C07D36 /* DEObject.h */,
+				7622561E1888C38B00C07D36 /* DEObject.m */,
 			);
 			path = OCMockExample;
 			sourceTree = "<group>";
@@ -129,6 +144,7 @@
 		762255FE1888BF6300C07D36 /* OCMockExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				762256161888C26A00C07D36 /* OCMock */,
 				762256041888BF6300C07D36 /* OCMockExampleTests.m */,
 				762255FF1888BF6300C07D36 /* Supporting Files */,
 			);
@@ -143,6 +159,20 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		762256161888C26A00C07D36 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				762256171888C26A00C07D36 /* NSNotificationCenter+OCMAdditions.h */,
+				762256181888C26A00C07D36 /* OCMArg.h */,
+				762256191888C26A00C07D36 /* OCMConstraint.h */,
+				7622561A1888C26A00C07D36 /* OCMock.h */,
+				7622561B1888C26A00C07D36 /* OCMockObject.h */,
+				7622561C1888C26A00C07D36 /* OCMockRecorder.h */,
+			);
+			name = OCMock;
+			path = usr/include/OCMock;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -240,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7622561F1888C38B00C07D36 /* DEObject.m in Sources */,
 				762255EC1888BF6300C07D36 /* main.m in Sources */,
 				762255F01888BF6300C07D36 /* DEAppDelegate.m in Sources */,
 			);
@@ -397,7 +428,24 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/usr/include",
+				);
 				INFOPLIST_FILE = "OCMockExampleTests/OCMockExampleTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/cbv/Development/OCMockExample/usr/lib,
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-force_load",
+					"\"$(SRCROOT)/usr/lib/libOCMock.a\"",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -416,7 +464,24 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OCMockExample/OCMockExample-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/usr/include",
+				);
 				INFOPLIST_FILE = "OCMockExampleTests/OCMockExampleTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/cbv/Development/OCMockExample/usr/lib,
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-force_load",
+					"\"$(SRCROOT)/usr/lib/libOCMock.a\"",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

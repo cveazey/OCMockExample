@@ -10,6 +10,12 @@
 
 @implementation DEAppDelegate
 
+
+- (NSString *)descriptionOfObject:(id)object
+{
+    return nil;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

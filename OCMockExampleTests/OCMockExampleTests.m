@@ -6,7 +6,12 @@
 //  Copyright (c) 2014 Double Encore, Inc. All rights reserved.
 //
 
+
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
+#import "DEAppDelegate.h"
+#import "DEObject.h"
+
 
 @interface OCMockExampleTests : XCTestCase
 
@@ -26,9 +31,13 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testDescriptionOfObject
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    id deObjectMock = [OCMockObject mockForClass:[DEObject class]];
+    [[[deObjectMock expect] andReturn:@"STUB DESCRIPTION"] description];
+    NSString *result = [(DEAppDelegate *)[[UIApplication sharedApplication] delegate] descriptionOfObject:deObjectMock];
+    [deObjectMock verify];
+    XCTAssertEqualObjects(result, @"STUB DESCRIPTION");
 }
 
 @end
