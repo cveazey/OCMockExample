@@ -31,7 +31,7 @@
     [super tearDown];
 }
 
-- (void)testDescriptionOfObject
+- (void)testProcessingObject
 {
     id deObjectMock = [OCMockObject mockForClass:[DEObject class]];
     [[[deObjectMock expect] andReturn:@"STUB"] processingResult];
