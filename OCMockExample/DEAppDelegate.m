@@ -13,8 +13,7 @@
 
 - (NSString *)processObject:(DEObject *)object
 {
-    return nil;
-//    return [object processingResult];
+    return [object processingResult];
 }
 
 
