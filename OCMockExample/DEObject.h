@@ -10,4 +10,6 @@
 
 @interface DEObject : NSObject
 
+- (NSString *)processingResult;
+
 @end

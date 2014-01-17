@@ -7,14 +7,16 @@
 //
 
 #import "DEAppDelegate.h"
+#import "DEObject.h"
 
 @implementation DEAppDelegate
 
-
-- (NSString *)descriptionOfObject:(id)object
+- (NSString *)processObject:(DEObject *)object
 {
     return nil;
+//    return [object processingResult];
 }
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

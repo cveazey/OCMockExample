@@ -34,10 +34,10 @@
 - (void)testDescriptionOfObject
 {
     id deObjectMock = [OCMockObject mockForClass:[DEObject class]];
-    [[[deObjectMock expect] andReturn:@"STUB DESCRIPTION"] description];
-    NSString *result = [(DEAppDelegate *)[[UIApplication sharedApplication] delegate] descriptionOfObject:deObjectMock];
+    [[[deObjectMock expect] andReturn:@"STUB"] processingResult];
+    NSString *result = [(DEAppDelegate *)[[UIApplication sharedApplication] delegate] processObject:deObjectMock];
+#pragma unused(result)
     [deObjectMock verify];
-    XCTAssertEqualObjects(result, @"STUB DESCRIPTION");
 }
 
 @end

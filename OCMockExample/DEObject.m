@@ -10,4 +10,10 @@
 
 @implementation DEObject
 
+- (NSString *)processingResult
+{
+    return @"RESULTS PENDING";
+}
+
+
 @end

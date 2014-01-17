@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class DEObject;
 
 @interface DEAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-- (NSString *)descriptionOfObject:(id)object;
+- (NSString *)processObject:(DEObject *)object;
 
 
 @end
